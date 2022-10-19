@@ -8,22 +8,18 @@ type CategoriesProps = {
 
 const categories = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
-const Categories: React.FC<CategoriesProps> = ({ value, onChangeCategory }) => {
+const Categories: React.FC<CategoriesProps> = React.memo(({ value, onChangeCategory }) => {
   return (
     <div className={s.categories}>
       <ul>
         {categories.map((category, index) => (
-          <li
-            className={value === index ? `${s.active}` : ''}
-            onClick={() => onChangeCategory(index)}
-            key={index}
-          >
+          <li className={value === index ? `${s.active}` : ''} onClick={() => onChangeCategory(index)} key={index}>
             {category}
           </li>
         ))}
       </ul>
     </div>
   );
-};
+});
 
 export default Categories;

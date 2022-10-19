@@ -7,15 +7,22 @@
   padding-top: 30px;
   margin-top: 30px;
 
+  @media screen and (max-width: 720px) {
+    margin: 0;
+  }
+
   .cart__itemImg {
     display: flex;
     align-items: center;
     margin-right: 15px;
     width: 10%;
 
+    @media screen and (max-width: 720px) {
+      width: 60px;
+    }
+
     img {
-      width: 80px;
-      height: 80px;
+      width: 100%;
     }
   }
 
@@ -30,11 +37,20 @@
       font-size: 22px;
       line-height: 27px;
       letter-spacing: 0.01em;
+
+      @media screen and (max-width: 720px) {
+        font-size: 14px;
+        line-height: 18px;
+      }
     }
 
     p {
       font-size: 18px;
       color: #8d8d8d;
+
+      @media screen and (max-width: 720px) {
+        font-size: 14px;
+      }
     }
   }
 
@@ -42,7 +58,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 13%;
+    gap: 5px;
+
+    @media screen and (max-width: 720px) {
+      margin-right: 10px;
+      gap: 2px;
+    }
 
     .cart__btnMinus {
       display: flex;
@@ -54,6 +75,10 @@
       border-color: #fe5f1e;
       cursor: pointer;
 
+      @media screen and (max-width: 720px) {
+        padding: 7px 7px;
+      }
+
       svg {
         path {
           fill: #fe5f1e;
@@ -61,6 +86,10 @@
         path:first-of-type {
           display: none;
         }
+      }
+
+      b {
+        font-size: 22px;
       }
 
       &:hover {
@@ -77,34 +106,40 @@
           }
         }
 
-        &:disabled {
-          opacity: 0.4;
-          border-color: #787878;
+        svg path {
+          fill: #787878;
+        }
+      }
 
-          &:active {
-            transform: none;
-          }
+      &:disabled {
+        opacity: 0.4;
+        border-color: #787878;
 
-          &:hover {
-            background-color: transparent;
+        svg path {
+          fill: #787878;
+        }
 
-            svg path {
-              fill: #787878;
-            }
-          }
+        &:active {
+          transform: none;
+        }
+
+        &:hover {
+          background-color: transparent;
 
           svg path {
             fill: #787878;
           }
         }
       }
-      b {
-        font-size: 22px;
-      }
     }
 
     b {
       font-size: 22px;
+
+      @media screen and (max-width: 720px) {
+        font-size: 18px;
+        margin: 0 2px;
+      }
     }
 
     .cart__btnPlus {
@@ -116,6 +151,10 @@
       background-color: #fff;
       border-color: #fe5f1e;
       cursor: pointer;
+
+      @media screen and (max-width: 720px) {
+        padding: 7px 7px;
+      }
 
       svg {
         path {
@@ -143,6 +182,14 @@
   .cart__itemPrice {
     b {
       font-size: 22px;
+
+      @media screen and (max-width: 720px) {
+        font-size: 18px;
+      }
+    }
+
+    @media screen and (max-width: 540px) {
+      display: none;
     }
   }
 
@@ -157,6 +204,10 @@
       background-color: #fff;
       border-color: #787878;
       cursor: pointer;
+
+      @media screen and (max-width: 720px) {
+        padding: 7px 7px;
+      }
 
       svg {
         transform: rotate(45deg);

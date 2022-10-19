@@ -1,8 +1,13 @@
 .categories {
+  @media screen and (max-width: 720px) {
+    margin-bottom: 20px;
+  }
+
   ul {
     display: flex;
     gap: 10px;
     list-style-type: none;
+    flex-wrap: wrap;
 
     li {
       padding: 13px 30px;
@@ -17,6 +22,12 @@
       color: #2c2c2c;
       cursor: pointer;
       transition: background-color 0.1s ease-in-out;
+
+      @media screen and (max-width: 720px) {
+        padding: 8px 19px;
+        font-size: 12px;
+        font-weight: 700;
+      }
 
       &:hover {
         background-color: darken(#f9f9f9, 2%);
