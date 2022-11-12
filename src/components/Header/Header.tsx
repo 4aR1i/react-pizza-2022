@@ -6,16 +6,8 @@ import { RootState } from '../../redux/store';
 import s from './header.module.scss';
 
 const Header: React.FC = () => {
-  const IsMounted = React.useRef(false);
   const { items, totalPrice } = useSelector((state: RootState) => state.cart);
   const totalCount = items.reduce((sum: number, item: any) => sum + item.count, 0);
-
-  React.useEffect(() => {
-    const json = JSON.stringify(items);
-    localStorage.setItem('cart', json);
-
-    IsMounted.current = true;
-  }, [items]);
 
   return (
     <div className={s.header}>
