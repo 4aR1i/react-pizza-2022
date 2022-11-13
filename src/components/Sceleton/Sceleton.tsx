@@ -4,15 +4,7 @@ import s from '../PizzaBlock/pizzablock.module.scss';
 
 const Sceleton: React.FC = () => {
   return (
-    <ContentLoader
-      className={s.pizzaBlock}
-      speed={2}
-      width={315}
-      height={515}
-      viewBox="0 0 315 515"
-      backgroundColor="#f3f3f3"
-      foregroundColor="#ecebeb"
-    >
+    <ContentLoader className={`${s.pizzaBlock} ${s.sceleton}`} speed={2} width={315} height={515} viewBox="0 0 315 515" backgroundColor="#f3f3f3" foregroundColor="#ecebeb">
       <rect x="527" y="237" rx="3" ry="3" width="88" height="6" />
       <rect x="569" y="235" rx="3" ry="3" width="52" height="6" />
       <rect x="422" y="239" rx="3" ry="3" width="410" height="6" />

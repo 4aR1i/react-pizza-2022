@@ -3,10 +3,6 @@
   text-align: center;
   margin: 0 auto;
 
-  // &:not(:nth-of-type(4n)) {
-  //   margin-right: 35px;
-  // }
-
   &__image {
     width: 260px;
     margin-left: 10px;
@@ -140,4 +136,9 @@
       font-size: 20px;
     }
   }
+}
+
+.sceleton {
+  padding-left: 35px;
+  box-sizing: unset;
 }
