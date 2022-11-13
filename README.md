@@ -8,4 +8,4 @@
 • Prettier (форматирование кода)
 • CSS-Modules / SCSS (стилизация)
 • React Content Loader (скелетон)
-• Code Splitting, React Loadable, useWhyDidYouUpdate
+
